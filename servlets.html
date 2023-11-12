@@ -1,0 +1,15 @@
+import java.io.*;
+import javax.servlet.*;
+import javax.servlet.http.*;
+import java.sql.*;
+
+public class ServletVentas extends HttpServlet {
+    public void doPost(HttpServletRequest request, HttpServletResponse response)
+            throws ServletException, IOException {
+
+        response.setContentType("text/html");
+        PrintWriter out = response.getWriter();
+
+        String nombreProducto = request.getParameter("nombreProducto");
+        String cantidad = request.getParameter("cantidad");
+        String precio = request.getParameter
